@@ -45,7 +45,7 @@ import java.util.Properties;
 public class PostgresCDCBuilder extends AbstractCDCBuilder implements CDCBuilder {
 
     private final static String KEY_WORD = "postgres-cdc";
-    private final static String METADATA_TYPE = "Postgres";
+    private final static String METADATA_TYPE = "PostgreSql";
 
     public PostgresCDCBuilder() {
     }
@@ -122,7 +122,7 @@ public class PostgresCDCBuilder extends AbstractCDCBuilder implements CDCBuilder
             sb.append(":");
             sb.append(config.getPort());
             sb.append("/");
-            sb.append(schema);
+            sb.append(config.getDatabase());
             configMap.put(ClientConstant.METADATA_NAME, sb.toString());
             configMap.put(ClientConstant.METADATA_URL, sb.toString());
             configMap.put(ClientConstant.METADATA_USERNAME, config.getUsername());
