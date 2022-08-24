@@ -34,6 +34,7 @@ import com.dlink.model.FlinkCDCConfig;
  * @since 2022/4/12 21:12
  **/
 public class CDCBuilderFactory {
+
     private static CDCBuilder[] cdcBuilders = {
         new MysqlCDCBuilder(),
         new OracleCDCBuilder(),
